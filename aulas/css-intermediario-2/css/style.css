@@ -1,0 +1,106 @@
+@import url("vars.css");
+@import url("reset.css");
+
+
+* {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+h2 {
+  color: var(--primary-color);
+}
+
+h3 {
+  color: var(--primary-color);
+}
+
+p {
+  color: var(--secondary-color);
+  font-size: 0.5rem;
+}
+
+button {
+  background-color: var(--secondary-color);
+}
+
+h1, h2, h3, button {
+  font-size: 0.5em;
+}
+
+img {
+  display: block;
+  width: 500px;
+  /* filter: blur(2px); 
+  Também serve pra textos, divs, etc
+  Tipo um post com spoiler, posts sensiveis, etc
+  */
+  /* filter: brightness(5%); */
+  /* Tem filter que usa px, tem os que usam %, tem que ver o w3c */
+}
+
+.box1 {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+.box1 div {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  /* transition: 500ms ease-in 500ms; */
+}
+
+.box1 div:hover {
+  transition-duration: 500ms;
+  transition-delay: 500ms;
+  transition-timing-function: ease-in;
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  transform: translate(200px, 0) rotate(360deg);
+  /* transform: scale(2, 2); */
+  /* transform: skew(50deg, 50deg); */
+}
+
+.box2 {
+  width: 100vw;
+  height: 95vh;
+  background-color: crimson;
+  max-width: 100%;
+}
+
+.box2 div {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  animation: minhaAnimacao 2500ms 1 ease-in 1000ms;
+}
+
+@keyframes minhaAnimacao {
+  0% {
+    background-color: black;
+  }
+  50% {
+    transform: translate(100px, 0);
+    box-shadow: 0 0 100px cyan;
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 0 1px cyan;
+  }
+}
+
+.box3 {
+  width: 100vw;
+  height: 100vh;
+  background-color: coral;
+}

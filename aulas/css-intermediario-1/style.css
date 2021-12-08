@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+}
+
+.ex0, .ex1, .ex2, .ex3, .ex4, .ex5, .ex6, .ex7 {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.red {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ex2 > p {
+  /* O '>' diz que a regra tem que ser aplicada somente aos filhos da classe, 
+  e no caso o últimp 'p' é neto, pois é filho de section */
+  color: blue;
+}
+
+.ex3 {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  text-indent: 50px;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  text-shadow: 0 0 10px black;
+}
+
+.ex3 + p {
+  /* O '+' aplica a regra pro primeiro irmão direto */
+  color: green;
+}
+
+.ex4 ~ p {
+  /* O '~' aplica a regra pra todos irmãos diretos */
+  color: darkgreen;
+}
+
+.ex0 .p1 {
+  display: none;
+  /* Faz o elemento desaparecer e desocupa o espaço dele*/
+}
+
+.ex0 .p2 {
+  visibility: hidden;
+  /* Faz o elemento desaparecer e mantem o espaço dele*/
+}
+
+.ex0 .p3 {
+  opacity: 0;
+  /* Faz o elemento ficar transparente e mantem o espaço dele*/
+}
+
+.ex0 .p3:hover {
+  opacity: 1;
+}
+
+.ex5, .ex6, .ex7 {
+  width: 250px;
+  height: 250px;
+}
+
+.ex5 {
+  overflow: hidden;
+}
+
+.ex6 {
+  overflow: scroll;
+}
+
+.ex7 {
+  overflow: auto;
+}
+
+a:visited {
+  color: rgb(125, 0, 0);
+}
+
+a:active {
+  color: blueviolet;
+}
+
+.ex4 p:first-child {
+  color: indigo;
+}
+
+.ex4 p:last-child {
+  color: orangered;
+}
+
+.ex4 p:nth-child(2) {
+  color: hotpink;
+}
+
+.ex6 p::first-line {
+  color: orange;
+  font-weight: 600;
+}
+
+.ex6 p::first-letter {
+  color: red;
+}
+
+.ex5 p::before {
+  background-image: url("https://foodsafetybrazil.org/wp-content/uploads/2021/01/icon.png");
+  display: inline-block;
+  /* quando precisa que fique na mesma linham as precisa acessar height e width */
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  content: ""; /* é obrigatório, mesmo que seja vazio */
+}
+
+::selection {
+  color: #fff;
+  background-color: steelblue;
+}
+
+/* 
+  Position Fixed: fica parado em um ponto e acompanha o scroll
+  Position absolute: fica parado em um ponto mas não acompanha o scroll e é relativo ao body
+  Position relative: quando você quer que o Position absolute seja relativo ao pai direto, coloca o Position relative no pai dele.
+		Lembrando que todos filhos dele, que forem Position absolute, serão relativos a ele
+*/
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: steelblue;
+}
+
+.subir {
+  position: fixed; 
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: steelblue;
+  color: white;
+  text-align: center;
+}
+
+.quadrado1 {
+  width: 50px;
+  height: 50px;
+  background-color: steelblue;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  color: #fff;
+}
+
+.quadrado2 {
+  width: 50px;
+  height: 50px;
+  background-color: steelblue;
+  position: relative;
+  bottom: 0;
+  color: #fff;
+  left: 50%;
+}
