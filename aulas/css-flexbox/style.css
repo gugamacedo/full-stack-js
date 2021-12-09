@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: gray;
+  height: 600px;
+  display: flex;
+  /* flex-direction: row;   Padrão*/
+  /* flex-wrap: wrap;       Pro conteúdo "cair" pra outra linha. O padrão é no-wrap*/
+  /* flex-flow: row wrap;   Shorthand pros dois acima*/
+  justify-content: space-around;
+  align-items: center; /* Alinha na vertical. Só funciona com o flex-direction: row; */
+  flex-wrap: wrap;
+  align-content: space-around; /* Quando você tem o wrap e quebra pra linha debaixo, pra alinhar*/
+}
+
+.container2 {
+  background-color: violet;
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+}
+
+.caixa {
+  width: 100px;
+  height: 100px;
+}
+
+.caixa.red {
+  background-color: red;
+}
+
+.caixa.blue {
+  background-color: blue;
+}
+
+.caixa.yellow {
+  background-color: yellow;
+}
+
+.caixa.green {
+  background-color: green;
+}
+
+.container2 .caixa.red {
+  align-self: flex-end;
+}
+
+.container2 .caixa.blue {
+  align-self: center;
+}
+
+.container2 .caixa.yellow {
+  flex-grow: 2;
+}
+
+.container2 .caixa.green {
+  order: -1;
+}
