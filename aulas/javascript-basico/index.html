@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Básico</title>
+    <!-- <script src=""></script> -->
+  </head>
+  <body>
+    <div id="frase">Alguma frase</div>
+
+    <button
+      onclick="document.querySelector('#lampada').src='lampada_desligada.gif'"
+    >
+      Apagar
+    </button>
+    <img id="lampada" src="lampada_desligada.gif" alt="Lampada desligada" />
+    <button
+      onclick="document.querySelector('#lampada').src='lampada_ligada.gif'"
+    >
+      Ligar
+    </button>
+
+    <br />
+    <br />
+    <label>Selecione seu ano de nascimento</label>
+    <br />
+    <select id="anoNasc">
+
+    </select>
+
+    <ul id="listaClientes">
+
+    </ul>
+
+    <ul id="listaClientes2">
+
+    </ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  div {
+    width: 30%;
+    background-color: lightblue;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+
+    h1 {
+      color: darkblue;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.seila {
+  margin: 30px auto;
+  width: 300px;
+  background-color: rgb(90, 156, 221);
+  padding: 20px;
+  text-align: center;
+
+
+  button {
+    background-color: lightblue;
+    border: none;
+    padding: 10px;
+    margin: 20px;
+  
+    &:hover {
+      border-right: 3px solid #002c8b;
+      border-bottom: 3px solid #002c8b;
+    }
+  }
+}
