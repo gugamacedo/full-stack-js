@@ -1,0 +1,29 @@
+.minus {
+  &.active {
+    background-color: red;
+  }
+}
+
+.plus {
+  &.active {
+    background-color: green;
+  }
+}
+
+/* ------------------------------------------- */
+
+.cities {
+  display: none;
+
+  &.okay {
+    display: block;
+  }
+}
+
+.inputError {
+  outline: 1px solid red;
+}
+
+.error {
+  color: red;
+}

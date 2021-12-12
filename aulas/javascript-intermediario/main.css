@@ -1,0 +1,68 @@
+body {
+  overflow-x: hidden;
+}
+
+.menuMobile {
+  position: absolute;
+  top: 100px;
+  right: -300px;
+  width: 150px;
+  height: 100vh;
+  background-color: gray;
+  transition: all 800ms ease;
+}
+.menuMobile.aberto {
+  right: 0;
+}
+
+.botaoMenu {
+  position: absolute;
+  background-color: gray;
+  right: 20px;
+  top: 20px;
+}
+.botaoMenu img {
+  height: 50px;
+}
+
+/* --------------------------------------------------------------- */
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: slateblue;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------- */
+.toast {
+  display: inline-block;
+  position: absolute;
+  left: -100%;
+  top: 30px;
+  background-color: #e6ffe6;
+  border: 1px solid #00a300;
+  border-radius: 6px;
+  padding: 15px;
+  color: green;
+  transition: all 600ms ease;
+}
+.toast.visible {
+  left: 45%;
+}
+
+/* --------------------------------------------------------------- */
+form div {
+  margin: 20px 0;
+}
+
+.inputError {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+}/*# sourceMappingURL=main.css.map */

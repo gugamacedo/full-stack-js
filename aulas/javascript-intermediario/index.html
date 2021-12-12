@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS intermediario</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="botaoMenu" onclick="openMenu()">
+      <img src="list.svg" alt="Menu" />
+    </div>
+
+    <div class="menuMobile">
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </div>
+
+    <h1 id="titulo">Título</h1>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <div class="box">Div 1</div>
+    <div class="box">Div 2</div>
+    <div class="box">Div 3</div>
+    <div class="box">Div 4</div>
+    <div class="box">Div 5</div>
+
+    <br />
+    <button id="testButton">Enviar</button>
+    <div id="ola"></div>
+    <br />
+
+    <div class="square"></div>
+
+    <br />
+    <input type="text" id="task" name="task" placeholder="Digita a tarefa" />
+    <button class="register">Cadastrar</button>
+    <div class="toast"></div>
+
+
+    <form id="registerForm" action="#">
+      <div>
+        <label>
+          Nome
+          <input type="text" name="name">
+          <span class="error"></span>
+        </label>
+      </div>
+  
+      <div>
+        <label>
+          Email
+          <input type="text" name="email">
+          <span class="error"></span>
+        </label>
+      </div>
+  
+      <div>
+        <label>
+          Cidade
+          <select name="city">
+            <option value="">-- Selecione --</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="São Paulo">Belo Horizonte</option>
+          </select>
+          <span class="error"></span>
+        </label>
+      </div>
+  
+      <button type="submit">Cadastrar</button>
+    </form>
+
+
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
