@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.container .box .alert {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px black;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.container .box {
+  width: 20%;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 10px;
+}
+.container .box.active {
+  background-color: lightblue;
+}
+.container .box h2 {
+  font-size: 24px;
+}
+.container .box p {
+  font: 18px;
+}
+.container .box p.hidden {
+  display: none;
+}
+.container .box p span {
+  color: hotpink;
+  font-size: 18px;
+  font-weight: 700;
+}
+.container .box a {
+  color: green;
+}
+.container .box a:hover {
+  color: blue;
+}
+.container .box a:hover + p.hidden {
+  display: block;
+}
+.container .box ul {
+  list-style: square;
+  margin: 0 0 0 50px;
+}
+.container .box ul li::marker {
+  color: orangered;
+}
+.container .box .alert.sucess {
+  background-color: green;
+}
+.container .box .alert.sucess else {
+  background-color: white;
+}
+.container .box .alert.warning {
+  background-color: yellow;
+}
+.container .box .alert.warning else {
+  background-color: white;
+}
+.container .box .alert.danger {
+  background-color: red;
+}
+.container .box .alert.danger else {
+  background-color: white;
+}/*# sourceMappingURL=main.css.map */

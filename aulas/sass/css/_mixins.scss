@@ -1,0 +1,26 @@
+@mixin reset-list {
+  list-style: square;
+  margin: 0 0 0 50px;
+
+    li::marker {
+      color: orangered;
+    }
+}
+
+@mixin span-style($color:black, $size:16px, $weight:400) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin bg-color($bg-color) {
+  @if $bg-color == sucess {
+    background-color: green;
+  } @else if $bg-color == warning {
+    background-color: yellow;
+  } @else if $bg-color == danger {
+    background-color: red;
+  } else {
+    background-color: white;
+  }
+}
