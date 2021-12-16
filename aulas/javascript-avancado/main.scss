@@ -1,0 +1,13 @@
+.loading {
+  display: none;
+  
+  &.active {
+    display: inline-block;
+    width: 20px;
+  }
+}
+
+.desactive {
+  display: none;
+  width: 200px;
+}
