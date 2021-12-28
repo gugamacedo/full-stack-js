@@ -2,27 +2,23 @@
 
 ###### Professor: [Thiago](https://www.thiago-medeiros.com/formacao-fullstack-javascript/) Medeiros
 
-<details><summary><strong>Sites</strong></summary>
+- Sites:
+  - [To Do List](https://gugamacedo.github.io/full-stack-js/aulas/to-do-list/)
+  - [Barber Shop](https://gugamacedo.github.io/full-stack-js/aulas/barber-shop/)
 
-- [To Do List](https://gugamacedo.github.io/full-stack-js/aulas/to-do-list/)
-- [Barber Shop](https://gugamacedo.github.io/full-stack-js/aulas/barber-shop/)
-
-</details>
-
-<details><summary><strong>Aulas</strong></summary>
-
-- [Exercícios JS Intermediário](https://gugamacedo.github.io/full-stack-js/aulas/javascript-intermediario/exercs.html)
-- [Javascript Intermediário](https://gugamacedo.github.io/full-stack-js/aulas/javascript-intermediario/)
-- [Exercícios JS Básico](https://gugamacedo.github.io/full-stack-js/aulas/javascript-basico/exercs.html)
-- [Javascript Básico](https://gugamacedo.github.io/full-stack-js/aulas/javascript-basico/)
-- [Sass](https://gugamacedo.github.io/full-stack-js/aulas/sass/)
-- [CSS Flexbox](https://gugamacedo.github.io/full-stack-js/aulas/css-flexbox/)
-- [CSS Intermediario 2](https://gugamacedo.github.io/full-stack-js/aulas/css-intermediario-2/)
-- [CSS Intermediario 1](https://gugamacedo.github.io/full-stack-js/aulas/css-intermediario-1/)
-- [Workshop](https://gugamacedo.github.io/full-stack-js/aulas/workshop/)
-- [Menu Horizontal](https://gugamacedo.github.io/full-stack-js/aulas/menu/)
-
-</details>
+- Aulas:
+  - [Exercícios JS Avançado](https://gugamacedo.github.io/full-stack-js/aulas/javascript-avancado/exercs.html)
+  - [Javascript Avançado](https://gugamacedo.github.io/full-stack-js/aulas/javascript-avancado/)
+  - [Exercícios JS Intermediário](https://gugamacedo.github.io/full-stack-js/aulas/javascript-intermediario/exercs.html)
+  - [Javascript Intermediário](https://gugamacedo.github.io/full-stack-js/aulas/javascript-intermediario/)
+  - [Exercícios JS Básico](https://gugamacedo.github.io/full-stack-js/aulas/javascript-basico/exercs.html)
+  - [Javascript Básico](https://gugamacedo.github.io/full-stack-js/aulas/javascript-basico/)
+  - [Sass](https://gugamacedo.github.io/full-stack-js/aulas/sass/)
+  - [CSS Flexbox](https://gugamacedo.github.io/full-stack-js/aulas/css-flexbox/)
+  - [CSS Intermediario 2](https://gugamacedo.github.io/full-stack-js/aulas/css-intermediario-2/)
+  - [CSS Intermediario 1](https://gugamacedo.github.io/full-stack-js/aulas/css-intermediario-1/)
+  - [Workshop](https://gugamacedo.github.io/full-stack-js/aulas/workshop/)
+  - [Menu Horizontal](https://gugamacedo.github.io/full-stack-js/aulas/menu/)
 
 <details><summary><strong>Anotações</strong></summary>
 </br>
