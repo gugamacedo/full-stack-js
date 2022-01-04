@@ -1,0 +1,9 @@
+- `npm init -y` pra iniciar um projeto
+- `npm install {package}` pra baixar um pacote
+  - Se passar no final o parâmetro `--save-dev` você está dizendo pro npm que essa depedência não é crucial, a aplicação funciona sem ela, é só pra fim de desenvolvimento.
+- Sempre colocar no arquivo *.gitignore* a pasta *node_modules*
+- `npm uninstall {package}` pra deletar um pacote
+- `require` pra importar uma função de outro arquivo (o qual precisa do `module.exports = {função}`)
+  - Se for passar mais de uma função, melhor criar um objeto com várias funções
+- `ctrl + c` pra parar o servidor
+- Com **ExpressJS** você escreve menos código do que com NodeJS puro, é mais enxuto e escalável 
