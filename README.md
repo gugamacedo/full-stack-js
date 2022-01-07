@@ -3,22 +3,22 @@
 ###### Professor: [Thiago](https://www.thiago-medeiros.com/formacao-fullstack-javascript/) Medeiros
 
 - Sites:
-  - [To Do List](https://gugamacedo.github.io/full-stack-js/aulas/to-do-list/)
-  - [Barber Shop](https://gugamacedo.github.io/full-stack-js/aulas/barber-shop/)
+  - [To Do List](https://gugamacedo.github.io/full-stack-js/to-do-list/)
+  - [Barber Shop](https://gugamacedo.github.io/full-stack-js/barber-shop/)
 
 - Aulas:
-  - [Exercícios JS Avançado](https://gugamacedo.github.io/full-stack-js/aulas/javascript-avancado/exercs.html)
-  - [Javascript Avançado](https://gugamacedo.github.io/full-stack-js/aulas/javascript-avancado/)
-  - [Exercícios JS Intermediário](https://gugamacedo.github.io/full-stack-js/aulas/javascript-intermediario/exercs.html)
-  - [Javascript Intermediário](https://gugamacedo.github.io/full-stack-js/aulas/javascript-intermediario/)
-  - [Exercícios JS Básico](https://gugamacedo.github.io/full-stack-js/aulas/javascript-basico/exercs.html)
-  - [Javascript Básico](https://gugamacedo.github.io/full-stack-js/aulas/javascript-basico/)
-  - [Sass](https://gugamacedo.github.io/full-stack-js/aulas/sass/)
-  - [CSS Flexbox](https://gugamacedo.github.io/full-stack-js/aulas/css-flexbox/)
-  - [CSS Intermediario 2](https://gugamacedo.github.io/full-stack-js/aulas/css-intermediario-2/)
-  - [CSS Intermediario 1](https://gugamacedo.github.io/full-stack-js/aulas/css-intermediario-1/)
-  - [Workshop](https://gugamacedo.github.io/full-stack-js/aulas/workshop/)
-  - [Menu Horizontal](https://gugamacedo.github.io/full-stack-js/aulas/menu/)
+  - [Exercícios JS Avançado](https://gugamacedo.github.io/full-stack-js/javascript-avancado/exercs.html)
+  - [Javascript Avançado](https://gugamacedo.github.io/full-stack-js/javascript-avancado/)
+  - [Exercícios JS Intermediário](https://gugamacedo.github.io/full-stack-js/javascript-intermediario/exercs.html)
+  - [Javascript Intermediário](https://gugamacedo.github.io/full-stack-js/javascript-intermediario/)
+  - [Exercícios JS Básico](https://gugamacedo.github.io/full-stack-js/javascript-basico/exercs.html)
+  - [Javascript Básico](https://gugamacedo.github.io/full-stack-js/javascript-basico/)
+  - [Sass](https://gugamacedo.github.io/full-stack-js/sass/)
+  - [CSS Flexbox](https://gugamacedo.github.io/full-stack-js/css-flexbox/)
+  - [CSS Intermediario 2](https://gugamacedo.github.io/full-stack-js/css-intermediario-2/)
+  - [CSS Intermediario 1](https://gugamacedo.github.io/full-stack-js/css-intermediario-1/)
+  - [Workshop](https://gugamacedo.github.io/full-stack-js/workshop/)
+  - [Menu Horizontal](https://gugamacedo.github.io/full-stack-js/menu/)
 
 <details><summary><strong>Anotações</strong></summary>
 </br>
@@ -39,6 +39,28 @@
     e.innerHTML = `Número ${index+1}`
   )
   ```
+  </details>
+
+  <details><summary><strong>NodeJS, ExpressJS, EJS</strong></summary>
+    
+  - Checar o *false* primeiro no condicional
+  - `npm init -y` pra iniciar um projeto
+  - `npm install {package}` pra baixar um pacote
+    - Se passar no final o parâmetro `--save-dev` você está dizendo pro npm que essa depedência não é crucial, a aplicação funciona sem ela, é só pra fim de desenvolvimento.
+  - Sempre colocar no arquivo *.gitignore* a pasta *node_modules*
+  - `npm uninstall {package}` pra deletar um pacote
+  - `require` pra importar uma função de outro arquivo (o qual precisa do `module.exports = {função}`)
+    - Se for passar mais de uma função, melhor criar um objeto com várias funções
+  - `ctrl + c` pra parar o servidor
+  - Com **ExpressJS** você escreve menos código do que com NodeJS puro, é mais enxuto e escalável
+  - Nem sempre sabemos em que porta a aplicação está rodando, então guardamos numa constante a porta, indepedente de qual seja: `const port = process.env.PORT || 8080`
+  - MVC (model - dados, view - visualização, controller - gerenciador dos dados)
+  - O Express/Node é meio burrinho praa char o caminho de um diretório, então você precisa utiliza a lib *path*
+  - EJS é uma engine de visualização, você consegue injetar JS no HTML, tornando-o muito mais dinâmico. Uns até chamam de HTML com anabolizantes hahaha 
+  - `<%- include('') %>` pra inserir uma partial `<%= {variável} %>` pra inserir um valor
+    - Esse valor antes tem que ser enviado pela rota dentro do render
+    - Se esse valor o JS tiver HTML dentro, você precisa fechar o EJS antes de começar o HTML, e abrir de novo quando começar o JS de novo
+
   </details>
 
   <details><summary><strong>SASS</strong></summary>
