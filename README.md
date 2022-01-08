@@ -7,6 +7,8 @@
   - [Barber Shop](https://gugamacedo.github.io/full-stack-js/barber-shop/)
 
 - Aulas:
+  - [ExpressJS e EJS](https://gugamacedo.github.io/full-stack-js/expressjs-ejs/views/index.ejs)
+  - [NodeJS](https://gugamacedo.github.io/full-stack-js/nodejs/client/index.html)
   - [Exercícios JS Avançado](https://gugamacedo.github.io/full-stack-js/javascript-avancado/exercs.html)
   - [Javascript Avançado](https://gugamacedo.github.io/full-stack-js/javascript-avancado/)
   - [Exercícios JS Intermediário](https://gugamacedo.github.io/full-stack-js/javascript-intermediario/exercs.html)
@@ -57,13 +59,9 @@
   - MVC (model - dados, view - visualização, controller - gerenciador dos dados)
   - O Express/Node é meio burrinho praa char o caminho de um diretório, então você precisa utiliza a lib *path*
   - EJS é uma engine de visualização, você consegue injetar JS no HTML, tornando-o muito mais dinâmico. Uns até chamam de HTML com anabolizantes hahaha 
-  - `<%- include('') %>` pra inserir uma partial `<%= {variável} %>` pra inserir um valor
+  - `<%- include('{partial}') %>` pra inserir uma partial `<% {código} %>` pra inserir código `<%= {variável} %>` pra inserir um valor
     - Esse valor antes tem que ser enviado pela rota dentro do render
     - Se esse valor o JS tiver HTML dentro, você precisa fechar o EJS antes de começar o HTML, e abrir de novo quando começar o JS de novo
-
-  </details>
-
-  <details><summary><strong>SASS</strong></summary>
 
   </details>
 
