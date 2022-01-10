@@ -2,8 +2,15 @@
 const express = require('express')
 const path = require('path')
 
+// módulos
+const db = require('./database')
+const routes = require('./routes')
+
 // iniciando express
 const app = express()
+
+// conexão com o database
+db.connect()
 
 // definindo o motor/engine de visualização
 app.set('view engine', 'ejs')
@@ -16,13 +23,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 // habilitando o server para receber dados via POST (formulário)
 app.use(express.urlencoded({ extended: true }))
 
-// criando rotas
-app.get('/', (req, res) => {
-  res.render('index', {
-    title: "teste"
-  })
-})
+// definindo as rotas
+app.use('/', routes)
 
+// middleware
 app.use((req, res) => res.send('Page not found'))
 
 // armazenando qual porta que a aplicação está rodando

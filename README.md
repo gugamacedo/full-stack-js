@@ -65,6 +65,12 @@
 
   </details>
 
+  <details><summary><strong>MongoDB</strong></summary>
+
+  - 
+
+  </details>
+
   <details><summary><strong>CSS</strong></summary>
 
 - Parentescos:
