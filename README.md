@@ -7,6 +7,7 @@
   - [Barber Shop](https://gugamacedo.github.io/full-stack-js/barber-shop/)
 
 - Aulas:
+  - [Front API](https://github.com/gugamacedo/full-stack-js/tree/main/front-api)
   - [API-Restful](https://github.com/gugamacedo/full-stack-js/tree/main/api-restful)
   - [MongoDB e MVC](https://github.com/gugamacedo/full-stack-js/tree/main/mongodb-mvc)
   - [ExpressJS e EJS](https://github.com/gugamacedo/full-stack-js/tree/main/expressjs-ejs)
@@ -87,6 +88,26 @@
     2. **POST**: enviar dados (visão do client) | receber dados (visão do server)
     3. **PUT**: atualizar dados
     4. **DELETE**: remover dados
+  - **CORS**: é o mecanismo que gerencia se outros domínios, fora do domínio ao qual pertence o recurso (ex: API), podem fazer requisições.
+    - `app.use(cors())` habilita pra qualquer domínio (tipo API's públicas)
+    - Pra habilitar um domínio específico `app.use(cors({origin: 'http://127.0.0.1:5500'}))`
+    - Mas se quiser vários em específico é assim:
+      ```javascript
+      const allowedOrigins = ['http://127.0.0.1:5500', 'http://localhost:5500']
+
+      app.use(cors({
+        origin: function(origin, callback) {
+          let allowed = true
+          
+          // permitir requests sem origem (tipo mobile apps e curl)
+          if(!origin) allowed = true
+
+          if(!allowedOrigins.includes(origin)) allowed = false
+
+          callback(null, allowed)
+        }
+      }))
+      ```
 
   </details>
 

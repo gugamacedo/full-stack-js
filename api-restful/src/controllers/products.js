@@ -14,7 +14,11 @@ async function post(req, res) {
   const product = new ProductsModel({ name, brand, price })
 
   product.save()
-  res.send()
+  
+  res.send({
+    message: 'success',
+    product
+  })
 }
 
 async function put(req, res) {
@@ -23,7 +27,7 @@ async function put(req, res) {
   const product = await ProductsModel.findOneAndUpdate({ _id: id }, req.body, { new: true, useFindAndModify: false })
 
   res.send({
-    message: 'sucess',
+    message: 'success',
     product
   })
 
@@ -34,7 +38,7 @@ async function put(req, res) {
   await product.updateOne(req.body)
 
   res.send({
-    message: 'sucess',
+    message: 'success',
     product
   }) */
 }
@@ -44,7 +48,7 @@ async function del(req, res) {
 
   const product = await ProductsModel.deleteOne({ _id: id })
 
-  const message = product.deletedCount ? 'sucess' : 'error'
+  const message = product.deletedCount ? 'success' : 'error'
 
   res.send({
     message

@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 
 const db = require('./database')
 const routes = require('./routes')
@@ -7,6 +8,9 @@ const routes = require('./routes')
 const app = express()
 
 db.connect()
+
+// habilita CORS
+app.use(cors({origin: 'http://127.0.0.1:5500'}))
 
 // habilitando o server para receber dados JSON
 app.use(express.json())
