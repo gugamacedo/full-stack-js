@@ -1,0 +1,33 @@
+html, body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  gap: 10px;
+  
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr ;
+  /* 
+  grid-template-columns:100px 100px 100px;
+  grid-template-rows:100px 100px 100px ;
+  justify-content: space-between;
+  align-content: space-between; */
+
+  justify-items: end;
+  align-items: end;
+}
+
+.container > div {
+  background-color: steelblue;
+  width: 50%;
+  height: 50%;
+}
