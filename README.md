@@ -19,7 +19,7 @@
   - [Exercícios JS Básico](https://gugamacedo.github.io/full-stack-js/javascript-basico/exercs.html)
   - [Javascript Básico](https://gugamacedo.github.io/full-stack-js/javascript-basico/)
   - [Sass](https://gugamacedo.github.io/full-stack-js/sass/)
-  - [CSS Masonry Grid](https://gugamacedo.github.io/full-stack-js/masonry-grid/index4.html)
+  - [CSS Masonry Grid](https://github.com/gugamacedo/full-stack-js/tree/main/masonry-grid)
   - [CSS Flexbox](https://gugamacedo.github.io/full-stack-js/css-flexbox/)
   - [CSS Intermediario 2](https://gugamacedo.github.io/full-stack-js/css-intermediario-2/)
   - [CSS Intermediario 1](https://gugamacedo.github.io/full-stack-js/css-intermediario-1/)
