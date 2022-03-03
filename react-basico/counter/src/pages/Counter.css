@@ -1,0 +1,17 @@
+.counter {
+  width: 300px;
+  margin: 200px auto;
+  background-color: cadetblue;
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.counter span {
+  font-size: 3em;
+}
+.counter button {
+  padding: 20px;
+  font-size: 2em;
+}/*# sourceMappingURL=Counter.css.map */

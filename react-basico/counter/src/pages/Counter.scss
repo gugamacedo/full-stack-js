@@ -1,0 +1,19 @@
+.counter {
+  width: 300px;
+  margin: 200px auto;
+  background-color: cadetblue;
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    font-size: 3em;
+  }
+
+  button {
+    padding: 20px;
+    font-size: 2em;
+  }
+}
