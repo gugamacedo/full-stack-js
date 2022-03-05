@@ -42,3 +42,65 @@
     return () => document.title = 'React App'
   }, [count])
   ```
+- **React Router** é uma biblioteca que cuida das rotas/navegação, em aplicações React. Instalação `npm install react-router-dom`. Estrutura básica da declaração das rotas:
+  ```Javascript
+  // importando os component necessários
+  import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+ 
+  <Router>
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/about">
+        <About />
+      </Route>
+      <Route exact path="/contact">
+        <Contact />
+      </Route>
+    </Switch>
+  </Router>
+  ```
+  - Tem que colocar duas configurações no index.html: `<meta name="viewport" content="initial-scale=1, width=device-width" />` e `<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />`
+  - Na página onde ficará o menu de navegação:
+  ```Javascript
+  // importando os componentes necessários
+  import { Link } from 'react-router-dom'
+
+  <ul>
+  // Repare que não se usa "a href" e sim "Link to"
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/users">Usuários</Link></li>
+  </ul>
+  ```
+  - **Obs:** uma coisa bem legal é que o component **Link to** não vai até o servidor buscar a página, tanto que a página nem recarrega. É como se ele "escondesse" a página atual, e mostrasse a nova. Ao contrário do `a href` que manda a requisição pro server e retorna pro client. Com o **`Link to`** tudo acontecesse do lado do próprio client.
+  E se você estpa se perguntando "mas as rotas não são feitas no backend com o **Node**?" Primeiro que se não tiver back, isso já nem importa. Segundo que no caso da estrutura de nossos projetos, sempre faremos a **API-Restful** separada do front, fazendo requisições pelo frontend da aplicação. Então nesse caso as rotas podem perfeitamente serem feitas no frontend, mesmo existindo backend.
+- **Material.UI** é uma biblioteca com components prontos e estilizados, para aplicações React, baseado no tema *Material* da *Google*. Link: [mui.com/pt/components/](https://mui.com/pt/components/)
+  - Instalação `npm install @mui/material @mui/icons-material @emotion/react @emotion/styled`
+  - A biblioteca `icons-material` não permite desestruturação
+- **useStyles**: para aplicar CSS dentro do JS 🤯🤯🤯 Normalmente se cria uma **pasta** pra cada component que será estilizado, com um arquivo pro component e outro pro estilo dele, ex: `Header/Header.js` e `Header/Header.style.js`
+  - No arquivo do **component style**:
+  ```Javascript
+  import { makeStyles } from '@material-ui/core/styles'
+
+  const useStyles = makeStyles(() => ({
+    title: { // nome da propriedade/classe
+      marginLeft: 10, // se a propriedade CSS tive traço - colocar em camelCase
+    }
+  }))
+
+  export default useStyles
+  ```
+  - No arquivo do component: 
+  ```Javascript
+  import useStyles from './Header.style'
+
+  const Header = () => {
+    const classes = useStyles()
+
+    return (
+      // e dentro do componente colocar "className={classes.title}"
+    )
+  }
+  ```
+- 
