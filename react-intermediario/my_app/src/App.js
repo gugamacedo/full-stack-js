@@ -1,18 +1,32 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import TemplateDefault from './templates/Default/Default'
+import TemplateDefault from './templates/Default'
+import TemplatePage from './templates/Page'
+
 import Home from './pages/Home'
+import CustomersList from './pages/customers/List'
+import CustomersAdd from './pages/customers/Add'
+import CustomersEdit from './pages/customers/Edit'
 
 const App = () => (
-  <TemplateDefault>
-    <Router>
+  <Router>
+      <TemplateDefault>
       <Switch>
         <Route exact path="/">
-          <Home />
+          <TemplatePage title="Home" Component={Home} />
+        </Route>
+        <Route exact path="/customers">
+          <TemplatePage title="Listar Clientes" Component={CustomersList} />
+        </Route>
+        <Route exact path="/customers/add">
+          <TemplatePage title="Adicionar Clientes" Component={CustomersAdd} />
+        </Route>
+        <Route exact path="/customers/edit/:id">
+          <TemplatePage title="Editar Clientes" Component={CustomersEdit} />
         </Route>
       </Switch>
-    </Router>
-  </TemplateDefault>
+    </TemplateDefault>
+  </Router>
 )
 
 export default App

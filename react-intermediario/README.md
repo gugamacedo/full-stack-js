@@ -78,7 +78,7 @@
 - **Material.UI** é uma biblioteca com components prontos e estilizados, para aplicações React, baseado no tema *Material* da *Google*. Link: [mui.com/pt/components/](https://mui.com/pt/components/)
   - Instalação `npm install @mui/material @mui/icons-material @emotion/react @emotion/styled`
   - A biblioteca `icons-material` não permite desestruturação
-- **useStyles**: para aplicar CSS dentro do JS 🤯🤯🤯 Normalmente se cria uma **pasta** pra cada component que será estilizado, com um arquivo pro component e outro pro estilo dele, ex: `Header/Header.js` e `Header/Header.style.js`
+- **useStyles**: para aplicar CSS dentro do JS 🤯🤯🤯 Se o CSS for grande, normalmente se cria uma **pasta** pra cada component que será estilizado, com um arquivo pro component e outro pro estilo dele, ex: `Header/Header.js` e `Header/Header.style.js`
   - No arquivo do **component style**:
   ```Javascript
   import { makeStyles } from '@material-ui/core/styles'
@@ -103,4 +103,11 @@
     )
   }
   ```
-- 
+- No component **Grid** do React, você pode usar propriedades **flex** como **props**, e também fazer a responsividade de forma bem simples (também passando por props):
+  - **XS**: extra small (até 576px)
+  - **SM**: small (até 768px)
+  - **MD**: medium (até 992px)
+  - **LG**: large (até 1200px)
+  - **XL**: extra large (até 1400px)
+  - **XXL**: extra extra large (maior que 1400px)
+- É uma boa prática organizar o código na seguinte ordem: definições de hooks, depois states, os useEffect, e por fim os Handle.
