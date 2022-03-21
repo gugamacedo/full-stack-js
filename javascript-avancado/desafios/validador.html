@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEP</title>
+  </head>
+  <body>
+    <fieldset>
+      Informe o CEP
+      <form>
+        <label>CEP: </label>
+        <input type="number" id="cep" placeholder="12345678" />
+        <label>Rua: </label>
+        <input type="text" id="street" disabled />
+        <label>Bairro: </label>
+        <input type="text" id="district" disabled />
+        <label>Cidade: </label>
+        <input type="text" id="city" disabled />
+        <label>Estado: </label>
+        <input type="text" id="state" disabled />
+      </form>
+    </fieldset>
+
+    <script>
+      const $cep = document.getElementById('cep')
+
+      $cep.addEventListener('blur', (ev) => {
+        if (ev.target.value.length === 8) {
+          $cep.setAttribute('disabled', true)
+
+          cepValidation(ev.target.value)
+        } else if (ev.target.value.length > 8) {
+          document.querySelector('form').reset()
+          $cep.removeAttribute('disabled')
+          alert('O CEP tem apenas 8 números')
+        }
+      })
+
+      function cepValidation(evValue) {
+        fetch(`http://viacep.com.br/ws/${evValue}/json/`)
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.erro === true) {
+              document.querySelector('form').reset()
+              $cep.removeAttribute('disabled')
+              alert('CEP incorreto')
+            } else {
+              document.getElementById('street').value = data.logradouro
+              document.getElementById('district').value = data.bairro
+              document.getElementById('city').value = data.localidade
+              document.getElementById('state').value = data.uf
+
+              $cep.removeAttribute('disabled')
+            }
+          })
+      }
+    </script>
+  </body>
+</html>

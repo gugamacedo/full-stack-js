@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor</title>
+  </head>
+  <body>
+    <fieldset>
+      Conversor
+      <form>
+        <label>Dólar para Real: </label>
+        <input type="number" id="money" placeholder="00" step="1" />
+        <button type="button">Converter</button>
+      </form>
+    </fieldset>
+
+    <script>
+      const $money = document.getElementById('money')
+      const $button = document.querySelector('button')
+
+      $button.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        if ($money.value <= 0) {
+          alert('Só valores acima de zero')
+        } else {
+          fetch(
+            `https://free.currconv.com/api/v7/convert?q=USD_BRL&compact=ultra&apiKey=7f59eea760394fbbc985`
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              document.querySelector('body').innerHTML += `<div>$${
+                $money.value
+              } dólares em reais são RS${($money.value * data.USD_BRL).toFixed(2)}</div>`
+            })
+        }
+      })
+    </script>
+  </body>
+</html>
