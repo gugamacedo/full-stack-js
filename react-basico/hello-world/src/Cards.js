@@ -1,11 +1,14 @@
 import React from 'react'
+import useStyles from './Cards.style'
 
-import './Cards.css'
+const Cards = ({ children }) => {
+  const classes = useStyles()
 
-const Cards = ({ children }) => (
-  <div className='cards'>
-    {children}
-  </div>
-)
+  return (
+    <div className={classes.cards}>
+      {children}
+    </div>
+  )
+} 
 
 export default Cards
